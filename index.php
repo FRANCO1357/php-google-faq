@@ -23,15 +23,15 @@ $faqs = [
     [
         'question' => 'Perché il mio account è associato a un paese?',
         'answer' => '<p>Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:</p> 
-                    <ul>
+                    <ol>
                         <li>La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
-                            <ul>
+                            <ol type="a">
                                 <li>Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell\'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.</li>
                                 <li>Google LLC, con sede negli Stati Uniti, per il resto del mondo.</li>
-                            </ul>
+                            </ol>
                         </li> 
                         <li>La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.</li>
-                    </ul>
+                    </ol>
                     <p>Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese a cui è associato il tuo account.</p>',
     ],
     [
@@ -58,11 +58,36 @@ $faqs = [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>Google FAQs</title>
 </head>
 <body>
 
+    <!-- header -->
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+                <h1>Privacy e termini</h1>
+            </div>
+            <div class="profile">
+                <i class="fa-solid fa-ellipsis"></i>
+                <i class="fa-solid fa-user-tie"></i>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#"></a>Introduzione</li>
+                <li><a href="#"></a>Norme sulla privacy</li>
+                <li><a href="#"></a>Termini di servizio</li>
+                <li><a href="#"></a>Tecnologie</li>
+                <li class="active"><a href="#"></a>Domande frequenti</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
     <main>
         <div class="container">
             <?php foreach($faqs as $faq) : ?>
@@ -71,6 +96,35 @@ $faqs = [
             <?php endforeach ?>
         </div>
     </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#"></a>Google</li>
+                    <li><a href="#"></a>Tutto su Google</li>
+                    <li><a href="#"></a>Provacy</li>
+                    <li><a href="#"></a>Termini</li>
+                </ul>
+            </nav>
+            <div class="language">
+            <i class="fa-solid fa-language"></i>
+            <select name="language" id="language">
+                <option value="ita">Italiano</option>
+                <option value="fr">Francese</option>
+                <option value="de">Tedesco</option>
+                <option value="en">Inglese</option>
+                <option value="spn">Spagnolo</option>
+                <option value="cn">cinese</option>
+                <option value="bra">Brasiliano</option>
+                <option value="arg">Argentino</option>
+                <option value="por">Portoghese</option>
+                <option value="al">Albanese</option>
+            </select>
+            </div>
+        </div>
+    </footer>
 
         
     
